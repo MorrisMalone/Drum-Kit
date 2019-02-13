@@ -38,8 +38,8 @@ function createInstrumentsBoxes() {
         div.addEventListener('transitionend', removeTransition);
         div.addEventListener('click', playMe);
         
-        hName.textContent = instrument.name.toUpperCase();
-        pKey.textContent = instrument.assKey.toUpperCase();
+        hName.textContent = instrument.assKey.toUpperCase();
+        pKey.textContent = instrument.name.toUpperCase();
 
         div.appendChild(hName);
         div.appendChild(pKey);

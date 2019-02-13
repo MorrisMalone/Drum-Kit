@@ -1,12 +1,13 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Courier New', Courier, monospace;
+    background: url(https://images.unsplash.com/photo-1507766082493-6630ec67bc56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80) center center;
+    background-size: cover;
 }
 
 #main-container {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,17 +26,49 @@ body {
     padding: 10px;
     width: 100px;
     height: 100px;
-    border: 2px solid black;
+    border: 4px solid rgb(10, 10, 10);
     border-radius: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     transition: all 0.07s ease;
     cursor: pointer;
+    color: white;
+    text-shadow: 0 0 .5rem black;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.instrument:focus {
+    outline: none;
+}
+
+.instrument h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+.instrument h2 {
+    font-size: 50px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.instrument p {
+    color: #b49a07;
+    font-family: 'Karla', sans-serif;
 }
 
 .playing {
     transform: scale(1.1);
+    border-color: #eeea03;
+    box-shadow: 0 0 10px #eeea03;
+}
 
+@media (max-width: 500px) {
+    .instrument {
+        width: 80px;
+        height: 80px;
+        margin: 5px;
+    
+    }
 }
